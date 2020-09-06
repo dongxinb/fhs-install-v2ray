@@ -16,7 +16,7 @@
 # You can modify it to /usr/local/lib/v2ray/
 DAT_PATH='/usr/local/share/v2ray/'
 # You can modify it to /etc/v2ray/
-JSON_PATH='/usr/local/etc/v2ray/'
+JSON_PATH='/etc/v2ray/'
 
 check_if_running_as_root() {
     # If you want to run as another user, please modify $UID to be owned by this user
@@ -392,7 +392,7 @@ CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 Environment=V2RAY_LOCATION_ASSET=/usr/local/share/v2ray/
-ExecStart=/usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
+ExecStart=/usr/local/bin/v2ray -config /etc/v2ray/config.json
 Restart=on-failure
 
 [Install]
@@ -409,7 +409,7 @@ CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 Environment=V2RAY_LOCATION_ASSET=/usr/local/share/v2ray/
-ExecStart=/usr/local/bin/v2ray -config /usr/local/etc/v2ray/%i.json
+ExecStart=/usr/local/bin/v2ray -config /etc/v2ray/%i.json
 Restart=on-failure
 
 [Install]
